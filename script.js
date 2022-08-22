@@ -6,6 +6,7 @@ const neighborhoodInput = document.querySelector("#neighborhood");
 const regionInput = document.querySelector("#region");
 const formInputs = document.querySelectorAll("[data-input]");
 const closeButton = document.querySelector("#close-message");
+const fade = document.querySelector("#fade")
 
 cepInput.addEventListener("keypress", (e) => {
     const onlyNum = /[0-9]/
@@ -33,7 +34,8 @@ const getAdress = async (cep) => {
     console.log(data)
 
     if(data.erro === "true"){
-        adressForm.reset()
+        addressForm.reset()
+        toggleMessage("CEP invalido, tente novamente")
         toggleLoader()
         return
     }
@@ -41,8 +43,15 @@ const getAdress = async (cep) => {
 
 const toggleLoader = () => {
     const loader = document.querySelector("#loader")
-    const fade = document.querySelector("#fade")
-
     loader.classList.toggle("hide")
     fade.classList.toggle("hide")
+}
+
+const toggleMessage = (msg)=>{
+    const messageEl = document.querySelector("#message")
+    const messageElText = document.querySelector("#message p")
+
+    messageElText.innerText = msg
+    fade.classList.toggle("hide")
+    messageEl.classList.toggle("hide")
 }
