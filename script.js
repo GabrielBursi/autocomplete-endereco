@@ -34,6 +34,9 @@ const getAdress = async (cep) => {
   console.log(data);
 
   if (data.erro === "true") {
+    if(!addressInput.hasAttribute("disabled")){
+        toggleDisabled();
+    }
     addressForm.reset();
     toggleMessage("CEP invalido, tente novamente");
     toggleLoader();
@@ -81,3 +84,14 @@ const toggleMessage = (msg) => {
 closeButton.addEventListener("click", () => {
   toggleMessage();
 });
+
+addressForm.addEventListener("submit",(e)=>{
+    e.preventDefault()
+    toggleLoader();
+    setTimeout(() => {
+        toggleLoader();
+        toggleMessage("Endereço salvo com sucesso!")
+        addressForm.reset()
+        toggleDisabled()
+    },2500)
+})
