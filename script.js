@@ -16,3 +16,14 @@ cepInput.addEventListener("keypress", (e) => {
         return;
     }
 })
+
+cepInput.addEventListener("keyup", (e) => {
+    const inptValue = e.target.value
+    if(inptValue.length === 8){
+        getAdress(inptValue)
+    }
+})
+
+const getAdress = async (cep) => {
+    console.log(cep)
+}
