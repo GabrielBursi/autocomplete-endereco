@@ -2,7 +2,7 @@
 
 #body {
   background-color: $bg-color;
-  color: $text-color;
+  color: $primary-color;
 }
 /* Message */
 #fade {
@@ -66,7 +66,7 @@
 }
 
 .step p {
-  color: var(--text-color);
+  color: $text-color;
 }
 
 .line {
@@ -76,4 +76,57 @@
   width: 90%;
   left: 5%;
   z-index: -1;
+}
+/* Form header */
+#form-header p {
+  color: $text-color;
+}
+
+/* Form */
+#order-form-container {
+  max-width: 700px;
+}
+
+#order-form-container input,
+#order-form-container select {
+  background-color: $bg-color;
+  border: 2px solid $border-color;
+  color: $primary-color;
+}
+
+#order-form-container select {
+  padding: 1rem 0.75rem;
+}
+
+#order-form-container label {
+  color: $text-color;
+}
+
+#order-form-container input:disabled,
+#order-form-container select:disabled {
+  background-color: $secondary-bg-color;
+  color: $text-color;
+}
+
+#order-form-container input:focus {
+  border-color: $secondary-color;
+}
+
+#order-form-container .form-floating > label {
+  left: 1em;
+}
+
+#save-btn {
+  background-color: #25cc88;
+  border: none;
+  height: 3em;
+  width: 8em;
+  border-radius: 1.5em;
+}
+
+/* Responsive */
+@media (min-width: 500px) {
+  #save-btn {
+    width: 8em;
+  }
 }

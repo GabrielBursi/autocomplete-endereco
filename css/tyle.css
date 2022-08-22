@@ -1,6 +1,6 @@
 #body {
   background-color: #04044c;
-  color: #8789af;
+  color: #fff;
 }
 
 /* Message */
@@ -68,7 +68,7 @@
 }
 
 .step p {
-  color: var(--text-color);
+  color: #8789af;
 }
 
 .line {
@@ -78,6 +78,60 @@
   width: 90%;
   left: 5%;
   z-index: -1;
+}
+
+/* Form header */
+#form-header p {
+  color: #8789af;
+}
+
+/* Form */
+#order-form-container {
+  max-width: 700px;
+}
+
+#order-form-container input,
+#order-form-container select {
+  background-color: #04044c;
+  border: 2px solid #20235b;
+  color: #fff;
+}
+
+#order-form-container select {
+  padding: 1rem 0.75rem;
+}
+
+#order-form-container label {
+  color: #8789af;
+}
+
+#order-form-container input:disabled,
+#order-form-container select:disabled {
+  background-color: #494a7d;
+  color: #8789af;
+}
+
+#order-form-container input:focus {
+  border-color: #25cc88;
+}
+
+#order-form-container .form-floating > label {
+  left: 1em;
+}
+
+#save-btn {
+  background-color: #25cc88;
+  border: none;
+  height: 3em;
+  width: 8em;
+  border-radius: 1.5em;
+}
+
+/* Responsive */
+@media (min-width: 500px) {
+  #save-btn {
+    width: 8em;
+  }
 }
 
 /*# sourceMappingURL=tyle.css.map */
