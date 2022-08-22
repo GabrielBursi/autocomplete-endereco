@@ -39,9 +39,9 @@ const getAdress = async (cep) => {
     toggleLoader();
     return;
   }
-//   if(addressInput.value === ""){
-//     toggleDisabled();
-//   }
+  if(addressInput.value === ""){
+    toggleDisabled();
+  }
   
   addressInput.value = data.logradouro;
   cityInput.value = data.localidade;
@@ -51,17 +51,17 @@ const getAdress = async (cep) => {
   toggleLoader();
 };
 
-// const toggleDisabled = () => {
-//     if(regionInput.hasAttribute('disabled')){
-//         formInputs.forEach((inpt) => {
-//             inpt.removeAttribute('disabled');
-//         })
-//     }else{
-//         formInputs.forEach((inpt) => {
-//           inpt.setAttribute("disabled", "disabled");
-//         });
-//     }
-// }
+const toggleDisabled = () => {
+    if(regionInput.hasAttribute('disabled')){
+        formInputs.forEach((inpt) => {
+            inpt.removeAttribute('disabled');
+        })
+    }else{
+        formInputs.forEach((inpt) => {
+          inpt.setAttribute("disabled", "disabled");
+        });
+    }
+}
 
 const toggleLoader = () => {
   const loader = document.querySelector("#loader");
