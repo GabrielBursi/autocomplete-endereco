@@ -25,10 +25,18 @@ cepInput.addEventListener("keyup", (e) => {
 })
 
 const getAdress = async (cep) => {
-    console.log(cep)
     toggleLoader()
     cepInput.blur()
+    const apiUrl = `https://viacep.com.br/ws/${cep}/json/`;
+    const response = await fetch(apiUrl)
+    const data = await response.json()
+    console.log(data)
 
+    if(data.erro === "true"){
+        adressForm.reset()
+        toggleLoader()
+        return
+    }
 }
 
 const toggleLoader = () => {
