@@ -55,3 +55,7 @@ const toggleMessage = (msg)=>{
     fade.classList.toggle("hide")
     messageEl.classList.toggle("hide")
 }
+
+closeButton.addEventListener("click",()=>{
+    toggleMessage()
+})
