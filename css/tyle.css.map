@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"tyle.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/style.scss","../sass/colors/colors.scss"],"names":[],"mappings":"AAEA;EACI,kBCHO;EDIP;;;AAEJ;AACA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AACA;EACI;EACA;;;AAGR;EACI;;;AAEJ;EACI;;AACA;EACI;EACA","file":"tyle.css"}
