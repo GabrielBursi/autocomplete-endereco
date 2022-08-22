@@ -26,4 +26,15 @@ cepInput.addEventListener("keyup", (e) => {
 
 const getAdress = async (cep) => {
     console.log(cep)
+    toggleLoader()
+    cepInput.blur()
+
+}
+
+const toggleLoader = () => {
+    const loader = document.querySelector("#loader")
+    const fade = document.querySelector("#fade")
+
+    loader.classList.toggle("hide")
+    fade.classList.toggle("hide")
 }
